@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>User Registration Form</title>
 </head>
 <body>
 <h2>User Registration Form</h2>
 <form method="post">
     <!-- Firstname -->
-    <div>
+    <div class="as-input">
         <label for="firstname">Firstname (3-20 characters):</label>
         <input
                 type="text"
@@ -20,20 +21,20 @@
         >
     </div>
     <!-- Lastname -->
-    <div>
+    <div class="as-input">
         <label for="lastname">Lastname (3-20 characters):</label>
         <input
                 type="text"
                 id="lastname"
                 name="lastname"
                 required
-                pattern=".{3,20}" title="Le nom doit contenir entre 3 et 20 caractères">
+                pattern=".{3,20}" title="Le nom doit contenir entre 3 et 20 caractères"
         >
     </div>
 
     <!-- Password -->
-    <div>
-        <label for="password">Password (au moins 8 caractères, 1 majuscule, 1 caractère spécial):</label>
+    <div class="as-input">
+        <label for="password">Password (au moins 8 caractères, 1 majuscule, <br>1 caractère spécial):</label>
         <input
                 type="password"
                 id="password"
@@ -45,7 +46,7 @@
     </div>
 
     <!-- Email -->
-    <div>
+    <div class="as-input">
         <label for="email">Email:</label>
         <input
                 type="email"
@@ -58,7 +59,7 @@
     </div>
 
     <!-- Phone Number -->
-    <div>
+    <div class="as-input">
         <label for="phone">Phone Number:</label>
         <input
                 type="tel"
@@ -71,7 +72,7 @@
     </div>
 
     <!-- Birthday -->
-    <div>
+    <div class="as-input">
         <label for="birthday">Birthday:</label>
         <input
                 type="date"
@@ -82,7 +83,7 @@
     </div>
 
     <!-- Description -->
-    <div>
+    <div class="as-textarea">
         <label for="description">Description:</label>
         <textarea
                 id="description"
