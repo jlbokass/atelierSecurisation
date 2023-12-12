@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>User Registration Form</title>
 </head>
 <body>
-<h2>User Registration Form</h2>
-<form method="post">
+
+<form method="post" onsubmit="return validateForm();">
+    <h2>User Registration Form</h2>
     <!-- Firstname -->
     <div class="as-input">
         <label for="firstname">Firstname (3-20 characters):</label>
@@ -16,9 +18,8 @@
                 type="text"
                 id="firstname"
                 name="firstname"
-                required pattern=".{3,20}"
-                title="Le prénom doit contenir entre 3 et 20 caractères"
         >
+        <div id="firstnameError" class="error"></div>
     </div>
     <!-- Lastname -->
     <div class="as-input">
@@ -27,9 +28,8 @@
                 type="text"
                 id="lastname"
                 name="lastname"
-                required
-                pattern=".{3,20}" title="Le nom doit contenir entre 3 et 20 caractères"
         >
+        <div id="lastnameError" class="error"></div>
     </div>
 
     <!-- Password -->
@@ -39,10 +39,8 @@
                 type="password"
                 id="password"
                 name="password"
-                required
-                pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).{8,}$"
-                title="Le mot de passe doit contenir au moins 8 caractères, 1 majuscule et 1 caractère spécial"
         >
+        <div id="passwordError" class="error"></div>
     </div>
 
     <!-- Email -->
@@ -52,10 +50,8 @@
                 type="email"
                 id="email"
                 name="email"
-                required
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                title="Veuillez saisir une adresse e-mail valide"
         >
+        <div id="emailError" class="error"></div>
     </div>
 
     <!-- Phone Number -->
@@ -65,10 +61,8 @@
                 type="tel"
                 id="phone"
                 name="phone"
-                pattern="[0-9]{10}"
-                required
-                title="Le numéro de téléphone doit contenir 10 chiffres"
         >
+        <div id="phoneError" class="error"></div>
     </div>
 
     <!-- Birthday -->
@@ -78,8 +72,8 @@
                 type="date"
                 id="birthday"
                 name="birthday"
-                required
         >
+        <div id="birthdayError" class="error"></div>
     </div>
 
     <!-- Description -->
@@ -92,10 +86,9 @@
                 cols="50"
         ></textarea>
     </div>
-
     <!-- Submit button -->
     <input type="submit" value="Submit">
-
 </form>
+<script src="as-validation.js"></script>
 </body>
 </html>

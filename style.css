@@ -45,3 +45,8 @@ input[type=submit] {
 .as-input, .as-textarea {
     margin-bottom: 20px;
 }
+
+.error {
+    width: 400px;
+    color: red;
+}
