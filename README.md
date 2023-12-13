@@ -1,4 +1,4 @@
-## Form Validator
+## Security Workshop
 Simple client and server side form validation. Check required, length, email and password.
 
 ## Project Client Side Specifications
